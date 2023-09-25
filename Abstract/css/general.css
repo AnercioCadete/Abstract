@@ -1,0 +1,414 @@
+/*
+--- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 
+/ 24 / 30 / 36 / 44 / 52 
+/ 62 / 74 / 86 / 98
+
+- Font weights:
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights: 
+
+
+- Letter spcaing
+
+
+--- 02 COLOURS
+
+- Primary: #4C5FD5
+- Tints: 
+#fdf2e9
+#fae5d3
+#eb984e
+
+- Shades:
+
+- Accents:
+- Greys
+
+
+--- 05 SHADOWS
+
+
+--- 06 BORDER_RADIUS
+
+
+--- 07 WHITESPACE
+
+- SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 
+/ 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* percentage of user´s browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #333;
+}
+
+/*********************************/
+/* GENERAL REUSABLE COMPONENTS */
+/*********************************/
+.container {
+  /* 1140px */
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 3.2rem;
+}
+
+.grid {
+  display: grid;
+  column-gap: 3.2rem;
+  row-gap: 9.6rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*********************************/
+/* HEADER */
+/*********************************/
+.main {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+
+  height: 8.8rem;
+  padding: 0 10rem;
+  position: relative;
+}
+
+.icon-header {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #fff;
+}
+
+.header-text {
+  font-size: 2.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.header-text-dash {
+  font-size: 2.2rem;
+}
+
+.link-help:link,
+.link-help:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.link-help:hover,
+.link-help:active {
+  text-decoration: underline;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.btn-request {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #191a1b;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 1rem 2.4rem;
+  border-radius: 9px;
+
+  border: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+
+.btn-sign-in {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #4c5fd5;
+  color: #fff;
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding: 1rem 3.2rem;
+  border-radius: 9px;
+
+  border: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.3s;
+}
+
+.btn-sign-in:link,
+.btn-sign-in:visited {
+  background-color: #4c5fd5;
+}
+
+.btn-sign-in:hover,
+.btn-sign-in:active {
+  background-color: #fff;
+  color: #000;
+}
+
+/*********************************/
+/* BUTTON HELP */
+/*********************************/
+.help-btn-section {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.btn-help {
+  display: flex;
+  background-color: #4c5fd5;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  padding: 0.7rem 2rem;
+  border-radius: 50px;
+  border-style: none;
+
+  font-family: inherit;
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+}
+
+.help-icon {
+  height: 2.6rem;
+  width: 2.6rem;
+  font-family: inherit;
+}
+
+.help {
+  margin-left: 0.2rem;
+  text-align: center;
+  font-family: inherit;
+}
+/*********************************/
+/* SECTION HERO */
+/*********************************/
+.section-hero {
+  padding: 8rem 0 20rem 0;
+  background-color: #dadbf1;
+}
+
+.hero {
+  position: relative;
+  top: 30px;
+}
+
+.heading-primary {
+  font-size: 7.4rem;
+  color: #000;
+  line-height: 1.2;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: -4px;
+  margin-bottom: 2.4rem;
+}
+
+.search-box {
+  position: absolute;
+  left: 25%;
+  height: auto;
+  font-weight: 400;
+  border: 1px solid #dee2e6;
+}
+
+.search-box input {
+  /* padding-left: 1.6rem;
+  padding-bottom: 1.6rem;
+  padding-right: 42rem;
+  padding-top: 1.6rem; */
+  padding: 1.6rem 42rem 1.6rem 1.6rem;
+
+  font-size: 2.4rem;
+  /* border-radius: 4px !important; */
+}
+
+/* input[type="search"] {
+  width: 100%;  
+} */
+
+.search-arrow {
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  top: 130px;
+  left: 71.5%;
+}
+
+/*********************************/
+/* INFO DETAILS */
+/*********************************/
+
+.section-info {
+  margin-top: 20rem;
+  margin-bottom: 12rem;
+}
+
+.info {
+  position: relative;
+  display: flex;
+  padding-right: 1.5rem;
+}
+
+.info-div-icon {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.info-icon {
+  display: flex;
+
+  height: 10rem;
+  width: 10rem;
+}
+
+.info-div-text_block {
+  display: inline-block;
+  margin-bottom: 1.2rem;
+  margin-left: 3rem;
+  line-height: 1.4;
+}
+
+.heading-secondary {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.info-text {
+  font-size: 2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.info-link:link,
+.info-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  color: #4c5fd5;
+}
+
+.info-link:hover,
+.info-link:active {
+  text-decoration: underline;
+}
+
+/*********************************/
+/* FOOTER */
+/*********************************/
+.grid--5-cols {
+  display: grid;
+  /* column-gap: 6.4rem; */
+  row-gap: 1.2rem;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+}
+
+.footer {
+  background-color: #000;
+  padding: 0rem 0 16rem 0;
+}
+
+.nav-col {
+  margin-top: 4.8rem;
+  margin-left: 12rem;
+  color: #fff;
+}
+
+.footer-heading {
+  color: #fff;
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+  font-weight: 700;
+}
+
+.footer-subheading {
+  font-size: 1.6rem;
+  margin-top: 3.2rem;
+  font-weight: 700;
+}
+
+.footer-nav {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.footer-link:link,
+.footer-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.container-copyright {
+  display: inline-block;
+  position: absolute;
+  top: 49%;
+  left: 76%;
+}
+
+.icon-header {
+  color: #fff;
+  height: 4rem;
+  width: 4rem;
+  margin-bottom: 1.6rem;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1.4;
+}
